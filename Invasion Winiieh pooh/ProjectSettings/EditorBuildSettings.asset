@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/DK/Scenes/PLAYTEST.unity
+    guid: 1c3a5695d75fc8649ad9b0df0f632f6f
+  - enabled: 1
+    path: Assets/DK/Scenes/DK-Level1.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/DK/Scenes/DK-Level2.unity
+    guid: 5c231b3da45933f43b57d12bd7298950
+  - enabled: 1
     path: Assets/Menu/Scene/Menu.unity
     guid: d3a3ff8f1b3ac9d41ac1417c7abb67e4
   - enabled: 1

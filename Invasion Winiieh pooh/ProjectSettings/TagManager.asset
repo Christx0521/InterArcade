@@ -12,6 +12,10 @@ TagManager:
   - Pellet
   - SuperPellet
   - PacMan3D
+  - Barril
+  - Test Barrier
+  - Objective
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -29,12 +33,12 @@ TagManager:
   - Pellet
   - Obstacle
   - Node
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Mario
+  - TestBarrier
+  - MovingPlat
+  - Ladder
+  - Fire
+  - Ground
   - 
   - 
   - 

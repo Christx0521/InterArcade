@@ -1,0 +1,86 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    public int level;
+    public int lives;
+    public int score;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        //if (level == 3)
+        //{
+            NewGame();
+        //}
+    }
+
+    private void NewGame()
+    {
+        lives = 3;
+        score = 0;
+        LoadLevel(level);
+    }
+
+    private void LoadLevel(int index)
+    {
+        level = index;
+
+        Camera camera = Camera.main;
+        if (camera != null)
+        {
+            camera.cullingMask = 0;
+        }
+
+        Invoke(nameof(LoadScene), 1f);
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(level);
+    }
+
+    public void LevelComplete()
+    {
+        score += 1000;
+
+        int nextLevel = level + 1;
+
+        if (nextLevel < SceneManager.sceneCountInBuildSettings)
+        {
+            LoadLevel(nextLevel);
+        }
+        else
+        {
+            LoadLevel(0);
+        }
+    }
+
+    public void LevelFailed()
+    {
+        lives--;
+
+        if (lives <= 0)
+        {
+            NewGame();
+        }
+        else
+        {
+            LoadLevel(level);
+        }
+    }
+}
