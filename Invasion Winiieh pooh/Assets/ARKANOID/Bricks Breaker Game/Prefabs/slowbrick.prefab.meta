@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 253723546e91c4077a3106f87d269d1b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27039
+  packageName: Bricks Breaker Starter Kit
+  packageVersion: 1.22
+  assetPath: Assets/Bricks Breaker Game/Prefabs/slowbrick.prefab
+  uploadId: 46394

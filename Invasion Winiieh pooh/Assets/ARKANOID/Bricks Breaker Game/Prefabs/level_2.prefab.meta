@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f893b9584ba0f4dc887081430cf07002
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27039
+  packageName: Bricks Breaker Starter Kit
+  packageVersion: 1.22
+  assetPath: Assets/Bricks Breaker Game/Prefabs/level_2.prefab
+  uploadId: 46394

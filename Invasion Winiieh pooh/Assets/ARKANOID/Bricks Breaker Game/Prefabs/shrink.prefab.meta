@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b5cb1b36d41f34e7ba3f1c5353c9afe3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27039
+  packageName: Bricks Breaker Starter Kit
+  packageVersion: 1.22
+  assetPath: Assets/Bricks Breaker Game/Prefabs/shrink.prefab
+  uploadId: 46394
