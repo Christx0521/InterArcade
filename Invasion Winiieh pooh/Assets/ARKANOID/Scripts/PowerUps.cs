@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using Assets.ARKANOID.Scripts;
 
+
 public class PowerUps : MonoBehaviour
 {
     [Header("Configuración del Jugador")]
@@ -61,6 +62,7 @@ public class PowerUps : MonoBehaviour
             displayNivel.text = "NIVEL : " + GameManager.Instance.level;
     }
 
+    // --- AQUÍ ESTÁ EL CAMBIO PRINCIPAL ---
     public void PerderVida()
     {
         BallController[] todasLasPelotas = Object.FindObjectsByType<BallController>(FindObjectsSortMode.None);
@@ -71,13 +73,37 @@ public class PowerUps : MonoBehaviour
 
         if (vida <= 0)
         {
-            if (GameManager.Instance != null) GameManager.Instance.LevelFailed();
+            // Usamos la función correcta de tu GameManager para el Game Over
+            if (GameManager.Instance != null)
+                Object.FindFirstObjectByType<Assets.ARKANOID.Scripts.GameManager>().MostrarFin(false);
         }
         else
         {
-            if (GameManager.Instance != null) GameManager.Instance.Invoke("SpawnNuevaBola", 1f);
+            // El propio jugador llama a reponer su bola después de 1 segundo
+            Invoke("RespawnSeguro", 1f);
         }
     }
+
+    // --- NUEVA FUNCIÓN AÑADIDA ---
+    void RespawnSeguro()
+    {
+        if (prefabBall == null)
+        {
+            Debug.LogError("¡Aviso! Faltó asignar el PrefabBall en el script PowerUps.");
+            return;
+        }
+
+        Vector3 posicion = transform.position + new Vector3(0, 0, 1.2f);
+        GameObject nuevaBola = Instantiate(prefabBall, posicion, Quaternion.identity);
+        nuevaBola.transform.SetParent(this.transform);
+
+        nuevaBola.transform.localScale = new Vector3(
+            1f / transform.localScale.x,
+            1f / transform.localScale.y,
+            1f / transform.localScale.z
+        );
+    }
+    // -------------------------------------
 
     private void OnTriggerEnter(Collider other)
     {

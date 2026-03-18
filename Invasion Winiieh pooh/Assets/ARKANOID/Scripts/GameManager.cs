@@ -234,6 +234,7 @@ namespace Assets.ARKANOID.Scripts
 
             Rigidbody rb = b.GetComponent<Rigidbody>();
             if (rb != null) rb.isKinematic = true;
+            Debug.Log("GameManager generó una nueva bola en la posición: " + posicion);
         }
 
         public void BotonSiguiente()

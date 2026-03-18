@@ -1,6 +1,10 @@
 using UnityEngine;
-using Assets.ARKANOID.Scripts;
-public class BallController : MonoBehaviour
+
+
+namespace Assets.ARKANOID.Scripts
+{ }
+
+    public class BallController : MonoBehaviour
 {
     [Header("Física de la Bola")]
     public float fuerza = 15f; // Aumentamos un poco para mejor respuesta

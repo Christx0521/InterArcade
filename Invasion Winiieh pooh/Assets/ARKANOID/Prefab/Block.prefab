@@ -136,4 +136,4 @@ MonoBehaviour:
   - {fileID: 9217661487412407404, guid: 8bd656fefc98e164d85e61045d691ec7, type: 3}
   - {fileID: 4938866991757552536, guid: 4e048d8d200baba4daee73ff483541fb, type: 3}
   - {fileID: 4146051430718057382, guid: 9d873dd6455b3ac4585bd9a4f52c4824, type: 3}
-  probabilidadDrop: 30
+  probabilidadDrop: 25
