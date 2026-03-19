@@ -6,8 +6,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int level;
-    public int lives;
     public int score;
+
+    public int firstLevel = 2;
+    public int lastLevel = 3;
 
     private void Awake()
     {
@@ -21,36 +23,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    public void NewGame()
     {
-        //if (level == 3)
-        //{
-            NewGame();
-        //}
-    }
-
-    private void NewGame()
-    {
-        lives = 3;
         score = 0;
-        LoadLevel(level);
-    }
-
-    private void LoadLevel(int index)
-    {
-        level = index;
-
-        Camera camera = Camera.main;
-        if (camera != null)
-        {
-            camera.cullingMask = 0;
-        }
-
-        Invoke(nameof(LoadScene), 1f);
-    }
-
-    private void LoadScene()
-    {
+        level = firstLevel;
         SceneManager.LoadScene(level);
     }
 
@@ -58,29 +34,20 @@ public class GameManager : MonoBehaviour
     {
         score += 1000;
 
-        int nextLevel = level + 1;
-
-        if (nextLevel < SceneManager.sceneCountInBuildSettings)
+        if (level < lastLevel)
         {
-            LoadLevel(nextLevel);
+            level++;
+            SceneManager.LoadScene(level);
         }
         else
         {
-            LoadLevel(0);
+            level = 0;
+            SceneManager.LoadScene(0);
         }
     }
 
     public void LevelFailed()
     {
-        lives--;
-
-        if (lives <= 0)
-        {
-            NewGame();
-        }
-        else
-        {
-            LoadLevel(level);
-        }
+        SceneManager.LoadScene(level);
     }
 }
