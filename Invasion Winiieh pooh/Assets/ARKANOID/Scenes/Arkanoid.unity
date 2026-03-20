@@ -2410,7 +2410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.4415283, y: -16.16632}
+  m_AnchoredPosition: {x: -2.4415283, y: -16.16626}
   m_SizeDelta: {x: 158.6567, y: 82.247}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1216851882
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b1eaf83910f62499d0af0d3c324433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  currentState: 3
+  currentState: 0
   PanelPause: {fileID: 1924593692}
   PanelGameOver: {fileID: 1758436638}
   PanelWinnerLevel: {fileID: 1133799343}
