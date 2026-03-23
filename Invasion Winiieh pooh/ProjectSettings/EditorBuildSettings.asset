@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ARKANOID/Scenes/Arkanoid.unity
     guid: 5c35fa8bf13396a43959495be79274db
+  - enabled: 1
+    path: Assets/Frooger/Scenes/Frooger.unity
+    guid: 3259ce31e3bed294d96b14f5d6ce143d
+  - enabled: 1
+    path: Assets/Frooger/Scenes/SpaceRocksMain.unity
+    guid: 8f2fbae8cf19b9549a1777d8d8f56948
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

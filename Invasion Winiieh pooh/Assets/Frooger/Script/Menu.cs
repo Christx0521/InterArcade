@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
 
     public void OnReturnButton()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
 
