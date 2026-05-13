@@ -4,11 +4,18 @@ public class PlaytestStarter : MonoBehaviour
 {
     private void Start()
     {
-        Invoke(nameof(StartNextLevel), 0.1f);
+        Invoke(nameof(StartGame), 0.1f);
     }
 
-    private void StartNextLevel()
+    private void StartGame()
     {
-        GameManager.Instance.LevelComplete();
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.NewGame();
+        }
+        else
+        {
+            Debug.LogError("No hay GameManager.Instance.");
+        }
     }
 }
